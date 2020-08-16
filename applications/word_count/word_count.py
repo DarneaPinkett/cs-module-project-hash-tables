@@ -1,5 +1,12 @@
 def word_count(s):
-    # Your code here
+    # Your code here,
+    name = s.replace('"', '').replace(':', '').replace(';','').replace(',','').replace('.','').replace('-','').replace('+','').replace('=','').replace('/','').replace('|','').replace('[','').replace(']', '').replace('{', '').replace('}', '').replace('(','').replace(')','').replace('*','').replace('^','').replace('&','').replace('\\', '')
+    if name == '':
+        return {}
+    split = name.lower().split()
+    words = {i:split.count(i) for i in split}
+    return words
+
 
 
 
