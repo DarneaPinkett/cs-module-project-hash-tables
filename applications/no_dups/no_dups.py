@@ -1,5 +1,13 @@
 def no_dups(s):
     # Your code here
+    lst_keys = []
+    if s == '':
+        return ''
+    l = s.split(' ')
+    a = dict.fromkeys(l)
+    for key in a.keys():
+        lst_keys.append(key)
+    return ' '.join(lst_keys)
 
 
 
